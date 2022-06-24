@@ -1,0 +1,54 @@
+<html>
+    <head>
+<title> javascripting</title><u>
+</head>
+<body bgcolor="gray">
+<script type="text/javascript">
+
+                
+function submit_marks() {
+var cat11 = parseInt(document.getElementById('s1').value);
+var cat2 = parseInt(document.getElementById('s2').value);
+var total = parseInt(document.getElementById('s2').value);
+
+var grade;
+if (per>=35 && per<=60) {
+grade = 'F';
+} 
+
+else if(per>=61 && per<=70){
+grade = 'D';
+}
+
+else if(per>=71 && per<=80){
+grade = 'C';
+}
+
+else if(per>=81 && per<=90){
+grade = 'B';
+}
+
+else if(per>=91 && per<=100){
+grade = 'A';
+}
+
+else{
+grade = "Invalid or Failed";
+}
+document.getElementById("demo").innerHTML = "Your Total Marks : "+total+"<br>Your Percentage : "+per+"<br>Your Grade : "+grade;
+// document.write("Your Total Marks : "+total);
+// document.write("<br>Your Percentage : "+per);
+// document.write("<br>Your Grade : "+grade);
+
+      </script>
+
+<h1>Enter Students Marks</h1>
+	<input type="text" id="s1" placeholder="Enter cat1 Marks"><br>
+	<input type="text" id="s2" placeholder="Enter cat2 Marks"><br>
+    <input type="text" id="s3" placeholder="Enter total Marks"><br>
+    
+    <input type="submit" onclick="submit_marks()">
+
+	<div id="demo"></div>
+</body>
+</html>
